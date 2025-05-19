@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost","root","Nicol@s2o24","login_register_db");
+$conexion = mysqli_connect("localhost","if0_39018644","rVzXeLqHZI","if0_39018644_Proyecto_EducaPlay");
 
 
 
