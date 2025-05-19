@@ -1,0 +1,411 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografía y colores */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafe;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor header */
+header {
+  background-color: #1e3a8a; /* azul intenso */
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo y titulo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container .logo {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* Título principal */
+.logo-container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #fbbf24; /* amarillo */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  flex-grow: 1;
+  max-width: 1200px;
+  margin: 30px auto 50px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+  border-bottom: 3px solid #fbbf24;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+
+/* Cursos listado */
+.curso-lista {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Separa cursos del formulario */
+#btnAgregarCurso {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Añadido margen arriba en formulario agregar curso */
+#formAgregarCurso {
+  margin-top: 20px;
+  background-color: #f0f4ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.1);
+}
+
+/* Ajuste para ocultar por defecto (ya en HTML hidden atributo) */
+#formAgregarCurso[hidden] {
+  display: none;
+}
+
+.curso {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  transition: box-shadow 0.3s ease;
+}
+
+.curso:hover,
+.curso:focus-within {
+  box-shadow: 0 6px 20px rgb(31 41 55 / 0.25);
+}
+
+.curso img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.curso h3 {
+  margin: 15px 20px 10px;
+  color: #0f172a;
+}
+
+.curso p {
+  margin: 0 20px 15px;
+  flex-grow: 1;
+  color: #334155;
+}
+
+/* Botones detalles y eliminar cursos */
+.btn-detalles {
+  background-color: #1e3a8a;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 12px 20px;
+  font-weight: 600;
+  margin: 0 10px 20px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  user-select: none;
+  display: inline-block;
+}
+
+.btn-detalles:hover,
+.btn-detalles:focus {
+  background-color: #374aaf;
+  outline: none;
+}
+
+.btn-eliminar {
+  background-color: #dc2626; /* rojo */
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin: 0 0 20px 0;
+  align-self: flex-start;
+  user-select: none;
+  display: inline-block;
+}
+
+.btn-eliminar:hover,
+.btn-eliminar:focus {
+  background-color: #b91c1c;
+  outline: none;
+}
+
+/* Container for buttons aligned horizontally */
+.botones {
+  margin: 0 20px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Descripción curso oculta inicialmente */
+.descripcion-curso {
+  margin: 0 20px 20px;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Sobre nosotros */
+#sobre-nosotros p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+/* Aside ventajas */
+aside {
+  background-color: #e0e7ff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-top: 25px;
+}
+
+aside h3 {
+  margin-bottom: 12px;
+  color: #3730a3;
+}
+
+aside ol {
+  padding-left: 20px;
+  list-style: decimal inside;
+  color: #334155;
+}
+
+/* Formulario contacto y agregar curso */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1000px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #1e3a8a;
+  outline: none;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Botones */
+form button,
+#btnAgregarCurso {
+  background-color: #1e3a8a;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 22px;
+  font-size: 1.05rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  width: fit-content;
+}
+
+form button:hover,
+form button:focus,
+#btnAgregarCurso:hover,
+#btnAgregarCurso:focus {
+  background-color: #374aaf;
+  outline: none;
+}
+
+/* Mensajes */
+#formMessage,
+#mensajeAgregarCurso {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #dc2626; /* rojo por defecto */
+}
+
+#mensajeAgregarCurso.success {
+  color: #16a34a; /* verde para exito */
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 8px;
+  padding: 0;
+}
+
+.social-media li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social-media li a:hover,
+.social-media li a:focus {
+  color: #fbbf24;
+}
+
+/* Reloj estilo */
+.clock {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+/* Diseño responsivo */
+
+/* Nav menu toggle para móviles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #1e3a8a;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+    border-radius: 0 0 0 10px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    margin: 10px 0;
+    text-align: right;
+    margin-right: 20px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Ajustes de tipografía para pantallas pequeñas */
+@media (max-width: 480px) {
+  .logo-container h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .curso h3 {
+    font-size: 1rem;
+  }
+  form {
+    max-width: 100%;
+  }
+}
+
