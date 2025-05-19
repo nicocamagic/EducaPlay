@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost","if0_39018644","rVzXeLqHZI","if0_39018644_Proyecto_EducaPlay");
+$conexion = mysqli_connect("sql206.infinityfree.com","if0_39018644","rVzXeLqHZI","if0_39018644_Proyecto_EducaPlay");
 
 
 
