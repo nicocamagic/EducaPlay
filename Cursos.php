@@ -143,13 +143,11 @@
 
     <footer>
         <p>&copy; 2023 Cursos Virtuales Educativos. Todos los derechos reservados.</p>
-        <nav aria-label="Redes sociales">
-            <ul class="social-media">
-                <li><a href="#" aria-label="Facebook de Cursos Virtuales">Facebook</a></li>
-                <li><a href="#" aria-label="Twitter de Cursos Virtuales">Twitter</a></li>
-                <li><a href="#" aria-label="Instagram de Cursos Virtuales">Instagram</a></li>
-            </ul>
-        </nav>
+            <div class="redes-sociales">
+            <a href="#" aria-label="Facebook de Cursos Virtuales" target="_blank">Facebook</a>
+            <a href="#" aria-label="Twitter de Cursos Virtuales" target="_blank">Twitter</a>
+            <a href="#" aria-label="Instagram de Cursos Virtuales" target="_blank">Instagram</a>
+        </div>
         <div class="clock" aria-label="Reloj en tiempo real"></div>
     </footer>
 
